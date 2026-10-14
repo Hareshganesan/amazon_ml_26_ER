@@ -1,0 +1,15 @@
+# Python 3.12. All licences MIT / BSD / Apache-2.0.
+# CPU stack: exact versions of the environment that built and verified the final output files
+# (blend + decision rule, step 3 of reproduce_final.sh).
+numpy==1.26.4
+pandas==2.2.3
+pyarrow==19.0.0
+scikit-learn==1.6.1
+lightgbm==4.7.0
+rapidfuzz==3.11.0
+# GPU stack (steps 1-2): ran on the Kaggle GPU image (Sep 2026, CUDA, T4/P100). Exact versions were not
+# recorded in the run logs; these are the tested major versions.
+torch>=2.1,<3
+transformers>=4.40,<5
+sentence-transformers>=3.0,<4
+# Models (downloaded at run time, MIT): intfloat/multilingual-e5-small (blocking), intfloat/multilingual-e5-base (cross-encoder)
